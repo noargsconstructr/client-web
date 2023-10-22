@@ -1,0 +1,27 @@
+<template>
+  <div id="main">
+    <el-config-provider namespace="ep">
+      <BaseHeader />
+      <div class="flex main-container">
+        <BaseSide />
+        <div w="full" py="4">
+          <p> Welcome back, Nickname! </p>
+        </div>
+      </div>
+    </el-config-provider>
+  </div>
+</template>
+
+<style>
+#main {
+  text-align: center;
+  color: var(--ep-text-color-primary);
+}
+
+.main-container {
+  height: calc(100vh - var(--ep-menu-item-height) - 3px);
+}
+</style>
+<script setup lang="ts">
+
+</script>
