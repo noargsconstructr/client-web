@@ -63,12 +63,14 @@ export default defineConfig({
     }),
   ],
   server: {
-      proxy: {
-        '/api': {
-          target: 'http://192.168.88.131:8080/',
-          changeOrigin: true,
-          secure:false
-        },
+    host: 'localhost',
+    port: 5173,
+    proxy: {
+      '/api': {
+        target: 'http://192.168.88.131:8080/',
+        changeOrigin: true,
+        secure:false
       },
     },
+  },
 })

@@ -67,7 +67,7 @@ async function authUser(){
 }
 
 .auth {
-  width: 100%;
+  width: 50%;
   height: 100%;
   margin-top:100px;
 
