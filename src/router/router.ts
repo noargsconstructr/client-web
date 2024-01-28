@@ -4,7 +4,7 @@ import {createRouter, createWebHistory} from 'vue-router'
 import {ElMessage} from "element-plus";
 
 const routes = [
-    {path: '/', name: 'Main', component: Main, meta:{requiresAuth: true}},
+    {path: '/', name: 'Main', component: Main, meta:{guest: true}},
     {path: '/auth', name: 'auth', component: Auth, meta: {guest: true}},
 ]
 
@@ -13,6 +13,7 @@ const router = createRouter({
     routes,
 })
 
+/*
 router.beforeEach((to, from, next) => {
     if (localStorage.getItem('accessToken') == null && to.name != 'auth') {
             next({ name: 'auth' })
@@ -21,5 +22,6 @@ router.beforeEach((to, from, next) => {
         next()
     }
 })
+*/
 
 export default router
