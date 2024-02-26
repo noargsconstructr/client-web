@@ -6,10 +6,10 @@ $--colors: (
   ),
 );
 
+$--font-family:(
+
+);
+
 @forward "element-plus/theme-chalk/src/dark/var.scss" with (
   $colors: $--colors
 );
-
-.el-input__inner{
-
-}
