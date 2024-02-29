@@ -1,0 +1,33 @@
+<template>
+  <div class="userInfo-container">
+    <el-descriptions title="User Info" column=1 >
+      <el-descriptions-item label="Username">kooriookami</el-descriptions-item>
+      <el-descriptions-item label="Telephone">18100000000</el-descriptions-item>
+      <el-descriptions-item label="Place">Suzhou</el-descriptions-item>
+      <el-descriptions-item label="Remarks">
+        <el-tag size="small">School</el-tag>
+      </el-descriptions-item>
+      <el-descriptions-item label="Address"
+      >No.1188, Wuzhong Avenue, Wuzhong District, Suzhou, Jiangsu
+        Province</el-descriptions-item
+      >
+    </el-descriptions>
+  </div>
+</template>
+
+<script>
+export default {
+  data(){
+    return{
+      email: 'test email',
+      login: 'login'
+    }
+  }
+}
+</script>
+
+<style scoped>
+.userInfo-container{
+
+}
+</style>

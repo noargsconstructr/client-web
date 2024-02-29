@@ -32,7 +32,7 @@ import { ElImage } from 'element-plus';
 
 <style>
 .server-open-title{
-  height: 200px;
+
 }
 
 .server-progress{

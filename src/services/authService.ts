@@ -3,17 +3,24 @@ import router from '../router/router'
 import {ElMessage} from "element-plus";
 
 class authService {
-    authUser(email: string,password: string){
-        return axios.post('/api/auth/v1/login', {
-            email: email,
+    authUser(login: string,password: string){
+        return axios.post('/api/auth/v1/auth', {
+            login: login,
             password: password
         })
     }
-    logout(): void{
+    async logout(): Promise<void> {
         localStorage.removeItem('accessToken')
         localStorage.removeItem('refreshToken')
         ElMessage.success("Successfully logged out")
-        router.push('Main')
+        await router.push('Main')
+    }
+    isTokenSet(): boolean{
+        if(localStorage.getItem('accessToken') != null ){
+            return true
+        }
+        else
+        { return false}
     }
 }
 
